@@ -1,9 +1,15 @@
-// ignore_for_file: sized_box_for_whitespace, prefer_const_constructors, camel_case_types, prefer_const_literals_to_create_immutables, duplicate_ignore
+// ignore_for_file: sized_box_for_whitespace, prefer_const_constructors, camel_case_types, prefer_const_literals_to_create_immutables, duplicate_ignore, non_constant_identifier_names, prefer_typing_uninitialized_variables, prefer_function_declarations_over_variables
 
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
+import 'newpage.dart';
+var press =(){
+ 
+};
+
 
 const kPrimaryColor = Color(0xFF0C9869);
 const kTextColor = Color(0xFF3C4046);
@@ -107,15 +113,18 @@ class recomanded_plant_card extends StatelessWidget {
             image: "assets/images/image_2.png",
             title: "SAMANTA",
             country: "Russia",
-            price: "\$999",
-            press: (){},
+            price: "\$998",
+            press: ( ){
+            },
           ),
           PlantCard(
             image: "assets/images/image_1.png",
             title: "SAMANTA",
             country: "Russia",
             price: "\$999",
-            press: (){},
+            press: (){
+              newpage();
+            },
           ),
           PlantCard(
             press: (){},
@@ -201,8 +210,7 @@ class PlantCard extends StatelessWidget {
       ),
     );
   }
-}var press =(){};
-
+}
 class Title_with_More_button extends StatelessWidget {
   const Title_with_More_button({
     Key? key,
@@ -231,7 +239,11 @@ class Title_with_More_button extends StatelessWidget {
                 primary: kPrimaryColor, // background
                 onPrimary: Colors.white, // foreground
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => newpage()
+             )
+             );
+              },
               child: Text(more)),
           Positioned(
             bottom: 0,

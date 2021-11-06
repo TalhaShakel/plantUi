@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace
+// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -37,18 +37,21 @@ class Head extends StatelessWidget {
       body: Header(),
       bottomNavigationBar: Container(
         padding: EdgeInsets.only(
-          left: kDefaultPadding*2,
-          right: kDefaultPadding*2,
+          left: kDefaultPadding * 2,
+          right: kDefaultPadding * 2,
           bottom: kDefaultPadding,
         ),
-        // color: kPrimaryColor,
+        color: kPrimaryColor,
         height: MediaQuery.of(context).size.height * 0.1,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             IconButton(
                 onPressed: () {},
-                icon: SvgPicture.asset("assets/icon/flower.svg")),
+                icon: Icon(
+                  Icons.wb_sunny,
+                  color: Colors.white,
+                )),
             IconButton(
                 onPressed: () {},
                 icon: SvgPicture.asset("assets/icon/heart-icon.svg")),
